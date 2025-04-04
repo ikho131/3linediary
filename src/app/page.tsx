@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function HomePage() {
   return (
@@ -49,6 +50,27 @@ export default function HomePage() {
               className="block w-full px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700"
             >
               체험하기
+            </Link>
+          </div>
+
+          <div className="mt-12 flex justify-center space-x-4">
+            <Link href="#" className="inline-block">
+              <Image
+                src="/app-store-icon.svg"
+                alt="App Store에서 다운로드"
+                width={160}
+                height={53}
+                className="h-[53px] w-auto"
+              />
+            </Link>
+            <Link href="#" className="inline-block">
+              <Image
+                src="/play-store-icon.svg"
+                alt="Google Play에서 다운로드"
+                width={160}
+                height={53}
+                className="h-[53px] w-auto"
+              />
             </Link>
           </div>
         </div>

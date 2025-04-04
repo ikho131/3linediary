@@ -34,20 +34,6 @@ export default function SignupPage() {
               />
             </div>
 
-            <div>
-              <label htmlFor="password-confirm" className="block text-sm font-medium text-gray-700">
-                비밀번호 확인
-              </label>
-              <input
-                type="password"
-                id="password-confirm"
-                name="password-confirm"
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#67a8bd] focus:outline-none focus:ring-1 focus:ring-[#67a8bd]"
-                placeholder="••••••••"
-                required
-              />
-            </div>
-
             <button
               type="submit"
               className="w-full bg-[#67a8bd] text-white py-3 px-4 rounded-lg hover:bg-[#5999ae] focus:outline-none focus:ring-2 focus:ring-[#67a8bd] focus:ring-offset-2"
