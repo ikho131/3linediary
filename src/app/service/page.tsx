@@ -4,60 +4,86 @@ import Image from 'next/image';
 export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">서비스 소개</h1>
+      <main className="max-w-4xl mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+          서비스 안내
+        </h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <div className="w-12 h-12 bg-[#e7f3f7] rounded-full flex items-center justify-center mb-4">
-              <span className="text-2xl">✍️</span>
-            </div>
-            <h3 className="text-xl font-bold mb-4">간단한 기록</h3>
-            <p className="text-gray-600">
-              복잡한 형식 없이 하루를 세 줄로 기록하세요.
-              사진 한 장과 함께 그날의 감정을 담아보세요.
-            </p>
-          </div>
+        <div className="space-y-12">
+          <section className="bg-white p-8 rounded-lg shadow-sm">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              기본 기능
+            </h2>
+            <ul className="space-y-4 text-gray-600">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <p>하루 세 줄 일기 작성</p>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <p>일기 보관함 (달력/목록 보기)</p>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <p>감정 태그 기능</p>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <p>날씨 기록</p>
+              </li>
+            </ul>
+          </section>
 
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <div className="w-12 h-12 bg-[#e7f3f7] rounded-full flex items-center justify-center mb-4">
-              <span className="text-2xl">💝</span>
-            </div>
-            <h3 className="text-xl font-bold mb-4">함께하는 일기</h3>
-            <p className="text-gray-600">
-              비슷한 관심사를 가진 사람들과 일기를 공유하고
-              서로의 이야기에 공감해보세요.
-            </p>
-          </div>
+          <section className="bg-white p-8 rounded-lg shadow-sm">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              프리미엄 기능
+            </h2>
+            <ul className="space-y-4 text-gray-600">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <p>일기 내보내기 (PDF, 텍스트)</p>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <p>사진 첨부 (일기당 최대 3장)</p>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <p>AI 감정 분석 리포트</p>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <p>테마 변경</p>
+              </li>
+            </ul>
+          </section>
 
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <div className="w-12 h-12 bg-[#e7f3f7] rounded-full flex items-center justify-center mb-4">
-              <span className="text-2xl">📚</span>
+          <section className="bg-white p-8 rounded-lg shadow-sm">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              요금제 안내
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="border rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">무료</h3>
+                <p className="text-3xl font-bold text-gray-900 mb-4">₩0</p>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• 기본 기능 모두 포함</li>
+                  <li>• 광고 포함</li>
+                  <li>• 기본 테마</li>
+                </ul>
+              </div>
+              <div className="border rounded-lg p-6 bg-[#67a8bd] text-white">
+                <h3 className="text-xl font-semibold mb-2">프리미엄</h3>
+                <p className="text-3xl font-bold mb-4">₩4,900/월</p>
+                <ul className="space-y-2">
+                  <li>• 모든 기본 기능 포함</li>
+                  <li>• 모든 프리미엄 기능 포함</li>
+                  <li>• 광고 없음</li>
+                  <li>• 우선 고객 지원</li>
+                </ul>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-4">나만의 책</h3>
-            <p className="text-gray-600">
-              기록한 일기들을 모아 나만의 책으로 만들어보세요.
-              특별한 순간들을 평생 간직할 수 있습니다.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold mb-8">지금 바로 시작하세요</h2>
-          <div className="inline-flex space-x-4">
-            <a 
-              href="https://apps.apple.com/kr/app/id1234567890"
-              className="px-6 py-3 bg-[#67a8bd] text-white rounded-lg hover:bg-[#5999ae]"
-            >
-              App Store
-            </a>
-            <a 
-              href="https://play.google.com/store/apps/details?id=com.willim.threeline"
-              className="px-6 py-3 bg-[#67a8bd] text-white rounded-lg hover:bg-[#5999ae]"
-            >
-              Google Play
-            </a>
-          </div>
+          </section>
         </div>
       </main>
     </div>

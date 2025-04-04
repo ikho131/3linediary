@@ -3,75 +3,114 @@ import Link from 'next/link';
 export default function SupportPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">고객지원</h1>
+      <main className="max-w-4xl mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+          고객지원
+        </h1>
         
         <div className="space-y-12">
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">자주 묻는 질문</h2>
-            <div className="space-y-4">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+          <section className="bg-white p-8 rounded-lg shadow-sm">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              자주 묻는 질문
+            </h2>
+            <div className="space-y-6">
+              <div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">
-                  세줄일기는 어떤 서비스인가요?
+                  Q. 일기는 어떻게 작성하나요?
                 </h3>
                 <p className="text-gray-600">
-                  세줄일기는 하루를 세 줄로 기록하는 간단한 일기 서비스입니다.
-                  복잡한 일기 작성 없이, 하루의 순간을 간단히 기록하고 공유할 수 있습니다.
+                  메인 화면의 '시작하기' 버튼을 클릭하여 회원가입 후, 
+                  하루 중 언제든지 세 줄로 일기를 작성할 수 있습니다.
                 </p>
               </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">
-                  일기는 어떻게 작성하나요?
+                  Q. 작성한 일기는 어디서 볼 수 있나요?
                 </h3>
                 <p className="text-gray-600">
-                  앱을 실행하고 '일기 쓰기' 버튼을 눌러 새로운 일기를 작성할 수 있습니다.
-                  하루의 기분, 일상, 감상을 세 줄로 자유롭게 기록하세요.
+                  '일기 보관함' 메뉴에서 달력이나 목록 형태로 
+                  지금까지 작성한 모든 일기를 볼 수 있습니다.
                 </p>
               </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">
-                  일기를 공유할 수 있나요?
+                  Q. 프리미엄 기능은 어떻게 사용하나요?
                 </h3>
                 <p className="text-gray-600">
-                  네, 작성한 일기를 친구들과 공유할 수 있습니다.
-                  공유 설정에서 공개 범위를 선택할 수 있으며, 비공개로 설정할 수도 있습니다.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-medium text-gray-900 mb-2">
-                  일기를 책으로 만들 수 있나요?
-                </h3>
-                <p className="text-gray-600">
-                  네, 작성한 일기를 모아서 나만의 책으로 만들 수 있습니다.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-medium text-gray-900 mb-2">
-                  데이터는 안전한가요?
-                </h3>
-                <p className="text-gray-600">
-                  네, 모든 데이터는 암호화되어 안전하게 보관됩니다.
+                  프로필 설정에서 프리미엄 구독을 신청하시면 
+                  모든 프리미엄 기능을 바로 사용하실 수 있습니다.
                 </p>
               </div>
             </div>
           </section>
 
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">문의하기</h2>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <p className="text-gray-600 mb-4">
-                추가 문의사항이 있으시다면 아래 이메일로 연락해주세요.
-              </p>
-              <a 
-                href="mailto:support@3linediary.com"
-                className="text-[#67a8bd] hover:underline"
+          <section className="bg-white p-8 rounded-lg shadow-sm">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              문의하기
+            </h2>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  이메일
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#67a8bd] focus:outline-none focus:ring-1 focus:ring-[#67a8bd]"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                  제목
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#67a8bd] focus:outline-none focus:ring-1 focus:ring-[#67a8bd]"
+                  placeholder="문의 제목을 입력해주세요"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  내용
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-[#67a8bd] focus:outline-none focus:ring-1 focus:ring-[#67a8bd]"
+                  placeholder="문의하실 내용을 자세히 적어주세요"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-[#67a8bd] text-white py-3 px-4 rounded-lg hover:bg-[#5999ae] focus:outline-none focus:ring-2 focus:ring-[#67a8bd] focus:ring-offset-2"
               >
-                support@3linediary.com
-              </a>
+                문의하기
+              </button>
+            </form>
+          </section>
+
+          <section className="bg-white p-8 rounded-lg shadow-sm">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              연락처
+            </h2>
+            <div className="space-y-4 text-gray-600">
+              <p>
+                <strong>이메일:</strong> support@3linediary.com
+              </p>
+              <p>
+                <strong>운영시간:</strong> 평일 오전 10시 ~ 오후 6시
+              </p>
+              <p>
+                <strong>주소:</strong> 서울특별시 강남구 테헤란로 123 세줄빌딩 4층
+              </p>
             </div>
           </section>
         </div>
