@@ -11,7 +11,7 @@ export default function Home() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/logo-square.png"
+                  src="/logo-square.svg"
                   alt="세줄일기"
                   width={40}
                   height={40}
@@ -153,17 +153,30 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-8">지금 바로 시작하세요</h2>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                href="https://apps.apple.com/kr/app/id1234567890"
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#67a8bd] hover:bg-[#5999ae]"
+              <Link 
+                href="https://apps.apple.com/kr/app/id1234567890" 
+                className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
               >
-                App Store에서 다운로드
+                <Image
+                  src="/app-store-icon.svg"
+                  alt="App Store"
+                  width={24}
+                  height={24}
+                />
+                <span>App Store</span>
               </Link>
-              <Link
-                href="https://wvse6.app.goo.gl/InApp"
-                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#67a8bd] hover:bg-[#5999ae]"
+              
+              <Link 
+                href="https://wvse6.app.goo.gl/InApp" 
+                className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
               >
-                Google Play에서 다운로드
+                <Image
+                  src="/play-store-icon.svg"
+                  alt="Google Play"
+                  width={24}
+                  height={24}
+                />
+                <span>Google Play</span>
               </Link>
             </div>
           </div>
