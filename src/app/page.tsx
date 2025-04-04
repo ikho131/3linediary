@@ -10,13 +10,9 @@ export default function Home() {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <Image
-                  src="/logo-square.svg"
-                  alt="세줄일기"
-                  width={40}
-                  height={40}
-                  className="h-10 w-10"
-                />
+                <div className="w-10 h-10 bg-[#67a8bd] rounded-lg flex items-center justify-center text-white font-bold">
+                  세줄
+                </div>
               </Link>
             </div>
             <div className="flex items-center space-x-8">
@@ -157,21 +153,16 @@ export default function Home() {
                 href="https://apps.apple.com/kr/app/id1234567890" 
                 className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
               >
-                <Image
-                  src="/app-store-icon.svg"
-                  alt="App Store"
-                  width={24}
-                  height={24}
-                />
-                <span>App Store</span>
+                <span>App Store에서 다운로드</span>
               </Link>
               
               <Link 
                 href="https://wvse6.app.goo.gl/InApp" 
                 className="flex items-center space-x-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
               >
+                <span>Google Play에서 다운로드</span>
                 <Image
-                  src="/play-store-icon.svg"
+                  src="/play-store-icon.png"
                   alt="Google Play"
                   width={24}
                   height={24}
