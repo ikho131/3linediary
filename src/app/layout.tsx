@@ -5,19 +5,17 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "세줄일기 - 하루를 세 줄로 기록하세요",
-  description: "매일 세 줄로 기록하는 특별한 순간들, 당신의 소중한 하루를 더 의미있게 만들어드립니다.",
+  title: "세줄일기",
+  description: "하루를 세 줄로 기록하세요",
 };
 
 export default function RootLayout({
   children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: { lang: string };
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang={params.lang || "ko"}>
+    <html lang="ko">
       <body className={inter.className}>{children}</body>
     </html>
   );
